@@ -5,6 +5,13 @@ It supports **7 functional modes** defined by the contest, processing 96 IoT sen
 
 ---
 
+## 📔 Features:
+- Pipeline-friendly: Inputs are received and assembled serially, processing 1 byte per clock.
+- Flexible design: Can support extension to more functions by adding more fn_sel cases.
+- Clear separation: FSM, parsing, and output logic are well-isolated, following good RTL style.
+
+---
+
 ## 🔍 Project Overview
 
 - 📦 96 packets of IoT data (128 bits each) are streamed in
