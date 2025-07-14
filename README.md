@@ -23,3 +23,16 @@ It supports **7 functional modes** defined by the contest, processing 96 IoT sen
 
 ## 📁 File Structure
 
+### 🔧 Files:
+- `IOTDF.v` – Main RTL
+- `testfixture.v` – Testbench
+- `f1.dat` – Input data (hex, 8-bit per line × 1536 lines)
+- `iotdf.vcd` – Waveform file
+- `B_ICC2019_priliminary_grad_cell_final.pdf` - Reference
+
+### ▶️ Commands
+
+```bash
+iverilog -o iotdf_sim IOTDF.v testfixture.v
+vvp iotdf_sim
+gtkwave iotdf.vcd
