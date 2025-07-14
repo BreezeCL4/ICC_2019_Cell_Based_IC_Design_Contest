@@ -4,7 +4,10 @@
 // Version: v1.0
 // Description: IOTDF  supports 7 functional modes defined by the contest, processing 96 IoT sensor data inputs (128 bits each) via streaming, and outputs processed results based on the selected function.
 // Design: IOTDF.v can be seperated into 3 parts, FSM, Parsing, Output..
-//      * FSM: 
+// Notes:
+//  * Pipeline-friendly: Inputs are received and assembled serially, processing 1 byte per clock.
+//  * Flexible design: Can support extension to more functions by adding more fn_sel cases.
+//  * Clear separation: FSM, parsing, and output logic are well-isolated, following good RTL style.
 
 `timescale 1ns/10ps
 
